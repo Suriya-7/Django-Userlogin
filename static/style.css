@@ -109,10 +109,21 @@ p {
 }
 
 .home {
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Align items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 100%; /* Take full height of the parent */
-    text-align: center; /* Center text inside the div */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e76a6a; /* Optional: adds a border for visibility */
+    border-radius: 8px;     /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better styling */
+}
+
+.login {
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    color: #ffffff !important;
+    background-color: #007bff !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease !important;
 }
