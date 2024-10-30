@@ -1,0 +1,118 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body with a background color and Poppins font */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the image container */
+.img {
+    height: 500px;
+    width: 500px;
+    margin-top: 10%;
+    margin-left: -50%;
+}
+
+/* Styling the form container */
+.form-container {
+    position: absolute;
+    width: 25%;
+    top: 30%;
+    left: 65%;
+    background: linear-gradient(to right, #ffffff, #f4f4f4);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling input fields */
+.form-inputs input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Change border color on focus */
+.form-inputs input:focus {
+    border-color: #ff5b47;
+    box-shadow: 0 0 5px rgba(255, 91, 71, 0.5);
+}
+
+/* Styling the heading */
+.form-container h2 {
+    padding: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Styling the submit button */
+.form-container button {
+    background-color: rgb(255, 91, 71);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #e8503a;
+}
+
+/* Styling the link */
+.form-container a {
+    display: block;
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-container a:hover {
+    color: #ff5b47;
+}
+
+/* Additional padding for the paragraph */
+p {
+    color: grey;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Styling the notification */
+.notification {
+    display: none;
+    background-color: #ff5b47;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.home {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100%; /* Take full height of the parent */
+    text-align: center; /* Center text inside the div */
+}

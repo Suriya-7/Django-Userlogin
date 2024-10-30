@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+
+    <!-- Linking to the CSS file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Preloading Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-- Displaying Django Messages -->
+    {% if messages %}
+    {% for message in messages %}
+        <h5>{{ message }}</h5>
+    {% endfor %}
+    {% endif %}
+
+    <!-- Sign In Page -->
+<div class="container">
+
+    <!-- Linking to static image -->
+    <div class="img">
+        <img src="{% static 'icons/img.svg' %}" alt="Sign Images">
+    </div>
+    <div class="form-container">
+        
+        <form action="" method="POST">
+            <h2>Sign Up</h2>
+            {% csrf_token %}
+
+            <div class="form-inputs">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-inputs">
+                <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="form-inputs">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-inputs">
+                <input type="password" name="conformpassword" placeholder="Confirm Password">
+            </div>
+            
+            <!-- Correcting the text in the link -->
+            <a href="{% url 'login' %}">Already have an account?</a>
+
+            <button type="submit">Sign-up</button>
+        </form>
+    </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+
+    <!-- Linking to the CSS file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Preloading Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+
+    <!-- Displaying Django Messages -->
+    {% if messages %}
+    {% for message in messages %}
+        <h5>{{ message }}</h5>
+    {% endfor %}
+    {% endif %}
+
+    <!-- Login In Page -->
+ 
+<div class="container">
+
+     <!-- Linking to static image -->
+    <div class="img">
+        <img src="{% static 'icons/img.svg' %}" alt="Sign Images">
+    </div>
+    <div class="form-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h2>Log In</h2>
+
+            <div class="form-inputs">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="form-inputs">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <!-- Correcting the link text -->
+            <a href="{% url 'register' %}">Register an account?</a>
+
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    
+</div>
+</body>
+</html>
