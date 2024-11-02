@@ -111,9 +111,12 @@ p {
 .home {
     text-align: center;
     padding: 20px;
-    border: 1px solid #e76a6a; /* Optional: adds a border for visibility */
-    border-radius: 8px;     /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for better styling */
+    border: 1px solid #e76a6a;
+    /* Optional: adds a border for visibility */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: shadow for better styling */
 }
 
 .login {

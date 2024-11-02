@@ -10,7 +10,7 @@ def register(request):
 
     # Your code to handle the registration process goes here.
     if request.method == 'POST':
-        username = request.POST['name']
+        username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
         conformpassword = request.POST['conformpassword']
@@ -18,18 +18,18 @@ def register(request):
         # Validate the form inputs.
         if password == conformpassword:
             if User.objects.filter(username=username).exists():
-                messages.error(request, "Username already exists!")
+                messages.info(request, "Username already exists!")
                 return redirect('register')
             elif User.objects.filter(email=email).exists():
-                messages.error(request, "Email already exists!")
+                messages.info(request, "Email already exists!")
                 return redirect('register')
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
-                messages.success(request, "Registration successful!")
+                messages.info(request, "Registration successful!")
                 return redirect('login')
         else:
-            messages.error(request, "Passwords do not match!")
+            messages.info(request, "Passwords do not match!")
             return redirect('register')
  
     # Save the user data to your database or any other storage system.
