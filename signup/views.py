@@ -15,6 +15,12 @@ def register(request):
         password = request.POST['password']
         conformpassword = request.POST['conformpassword']
 
+        # Check if any of the fields are empty
+        if not username or not email or not password or not conformpassword:
+            messages.info(request, "Please fill all the fields!")
+            return redirect('register')
+
+
         # Validate the form inputs.
         if password == conformpassword:
             if User.objects.filter(username=username).exists():
@@ -42,6 +48,12 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST['name']
         password = request.POST['password']
+
+
+        # Check if any of the fields are empty
+        if not username or not password:
+            messages.info(request, "Please fill all the fields!")
+            return redirect('login')
 
         # Validate the form inputs.
         user = authenticate(username=username, password=password)
